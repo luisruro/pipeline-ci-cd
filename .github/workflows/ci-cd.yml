@@ -1,0 +1,33 @@
+name: Pipeline CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-test-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Descargar código
+      uses: actions/checkout@v4 #Permite clonar nuestro repositorio en el entorno de ejecución o maquina virtual de GitHub Actions donde va estar corriendo el workflow.
+
+    - name: Instalar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Instalar dependencias
+      run: |
+        pip install pytest
+
+    - name: Ejecutar pruebas
+      run: |
+        pytest
+
+    - name: Despliegue Simulado
+      run: |
+        echo "Aplicación desplegada correctamente"
