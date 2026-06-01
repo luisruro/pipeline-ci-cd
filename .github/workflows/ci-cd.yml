@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  Actividad CI/CD: #Nombre del job, puede ser cualquier nombre descriptivo.
+  Actividad_CI_CD: #Nombre del job, puede ser cualquier nombre descriptivo.
 
     runs-on: ubuntu-latest
 
