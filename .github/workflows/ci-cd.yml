@@ -1,4 +1,5 @@
 name: Pipeline CI/CD
+run-name: CI/CD Pipeline
 
 on:
   push:
@@ -6,7 +7,7 @@ on:
       - main
 
 jobs:
-  build-test-deploy:
+  Actividad CI/CD: #Nombre del job, puede ser cualquier nombre descriptivo.
 
     runs-on: ubuntu-latest
 
